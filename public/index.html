@@ -111,52 +111,268 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" style="background-color: var(--secondary);">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Skills</h2>
-                <p>A snapshot of the technologies and methodologies I work with.</p>
+<section id="skills" style="background-color: var(--secondary);">
+    <div class="container">
+        <div class="section-header">
+            <h2>My Skills</h2>
+            <p>A snapshot of the technologies and methodologies I work with.</p>
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="skill-filters">
+            <button class="filter-btn active" data-filter="all">All Skills</button>
+            <button class="filter-btn" data-filter="technical">Technical</button>
+            <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+            <button class="filter-btn" data-filter="design">Design & UX</button>
+            <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+            <button class="filter-btn" data-filter="networking">Networking</button>
+        </div>
+        
+        <!-- Skills Grid -->
+        <div class="skills-container">
+            <!-- Technical Skills -->
+            <div class="skill-card show" data-category="technical">
+                <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Python</h3>
+                <span class="skill-category">Technical</span>
             </div>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Penetration Testing</h3>
+            
+            <div class="skill-card hidden" data-category="technical">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Network Security</h3>
+                <h3>C++</h3>
+                <span class="skill-category">Technical</span>
+            </div>
+
+            <div class="skill-card hidden" data-category="technical">
+                <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Web App Security</h3>
+                <h3>HTML5</h3>
+                <span class="skill-category">Technical</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="technical">
+                <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Reverse Engineering</h3>
+                <h3>CSS3</h3>
+                <span class="skill-category">Technical</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="technical">
+                <div class="skill-icon">
+                    <i class="fab fa-js"></i>
                 </div>
-                <div class="skill-card">
+                <h3>JavaScript</h3>
+                <span class="skill-category">Technical</span>
+            </div>
+
+            <div class="skill-card hidden" data-category="technical">
                     <div class="skill-icon">
-                        <i class="fas fa-server"></i>
+                        <i class="fas fa-database"></i>
                     </div>
-                    <h3>Server Administration</h3>
+                    <h3>MySQL</h3>
+                    <span class="skill-category">Technical</span>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-bug"></i>
-                    </div>
-                    <h3>Vulnerability Assessment</h3>
+            
+            <!-- Cybersecurity Skills -->
+            <div class="skill-card hidden" data-category="cybersecurity">
+                <div class="skill-icon">
+                    <i class="fas fa-shield-alt"></i>
                 </div>
+                <h3>Penetration Testing</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Metasploit</span>
+                </div>
+                <span class="skill-category">Cybersecurity</span>
+            </div>
+            
+            <div class="skill-card show" data-category="cybersecurity">
+                <div class="skill-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Network Security</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">Nmap</span>
+                </div>
+                <span class="skill-category">Cybersecurity</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="cybersecurity">
+                <div class="skill-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Web App Security</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">OWASP ZAP</span>
+                </div>
+                <span class="skill-category">Cybersecurity</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="cybersecurity">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Reverse Engineering</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Ghidra</span>
+                    <span class="skill-tag">IDA Pro</span>
+                </div>
+                <span class="skill-category">Cybersecurity</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="cybersecurity">
+                <div class="skill-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <h3>Vulnerability Assessment</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Nessus</span>
+                    <span class="skill-tag">OpenVAS</span>
+                </div>
+                <span class="skill-category">Cybersecurity</span>
+            </div>
+            
+            <!-- Design & UX Skills -->
+            <div class="skill-card show" data-category="design">
+                <div class="skill-icon">
+                    <i class="fas fa-pencil-ruler"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Adobe XD</span>
+                </div>
+                <span class="skill-category">Design & UX</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="design">
+                <div class="skill-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Graphic Design</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Photoshop</span>
+                    <span class="skill-tag">Lightroom</span>
+                </div>
+                <span class="skill-category">Design & UX</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="design">
+                <div class="skill-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>User Research</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Usability Testing</span>
+                    <span class="skill-tag">Wireframing</span>
+                </div>
+                <span class="skill-category">Design & UX</span>
+            </div>
+            
+            <!-- Infrastructure Skills -->
+            <div class="skill-card show" data-category="infrastructure">
+                <div class="skill-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Virtualization</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">VMware</span>
+                    <span class="skill-tag">VirtualBox</span>
+                </div>
+                <span class="skill-category">Infrastructure</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="infrastructure">
+                <div class="skill-icon">
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Operating Systems</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Windows</span>
+                    <span class="skill-tag">Kali Linux</span>
+                </div>
+                <span class="skill-category">Infrastructure</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="infrastructure">
+                <div class="skill-icon">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <h3>CLI Proficiency</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Windows</span>
+                </div>
+                <span class="skill-category">Infrastructure</span>
+            </div>
+
+            <div class="skill-card show" data-category="infrastructure">
+                <div class="skill-icon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <h3>Oracle Cloud</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">OCI Foundations</span>
+                    <span class="skill-tag">Cloud Infrastructure</span>
+                </div>
+                <span class="skill-category">Infrastructure</span>
+            </div>
+            
+            <!-- Networking Skills -->
+            <div class="skill-card hidden" data-category="networking">
+                <div class="skill-icon">
+                    <i class="fas fa-router"></i>
+                </div>
+                <h3>Cisco Networking</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">CCNA</span>
+                    <span class="skill-tag">Routing</span>
+                </div>
+                <span class="skill-category">Networking</span>
+            </div>
+            
+            <div class="skill-card hidden" data-category="networking">
+                <div class="skill-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>Network Protocols</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">TCP/IP</span>
+                    <span class="skill-tag">DNS</span>
+                </div>
+                <span class="skill-category">Networking</span>
+            </div>
+            
+            <div class="skill-card show" data-category="networking">
+                <div class="skill-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <h3>Device Configuration</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Switches</span>
+                    <span class="skill-tag">Routers</span>
+                </div>
+                <span class="skill-category">Networking</span>
             </div>
         </div>
-    </section>
+        
+        <!-- Show All Button -->
+        <div class="show-all-container">
+            <button id="show-all-btn" class="btn btn-secondary">Show All Skills</button>
+            <button id="show-less-btn" class="btn btn-secondary" style="display: none;">Show Less</button>
+        </div>
+
+        
+    </div>
+</section>
 
     <!-- Blog Section -->
     <section id="blog">
