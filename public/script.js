@@ -33,6 +33,41 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// Project Filtering Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const projectFilterButtons = document.querySelectorAll('.project-filters .filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (projectFilterButtons.length > 0) {
+        projectFilterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                projectFilterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filterValue === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filterValue)) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+        });
+    }
+});
+
+
 // Skills Filter and Show All/Show Less functionality
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -207,3 +242,6 @@ scrollTopButton.addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
+
+
+

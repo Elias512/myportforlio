@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GHOSTS.Dev | Cybersecurity & Software Engineering</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <!-- Firebase Hosting Compatibility -->
     <!-- <script defer src="/__/firebase/12.0.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
-    
+
     <!-- Firebase SDKs (for backend features) -->
     <script defer src="/__/firebase/12.0.0/firebase-app-compat.js"></script>
     <script defer src="/__/firebase/12.0.0/firebase-auth-compat.js"></script>
@@ -20,6 +21,7 @@
     <script defer src="/__/firebase/12.0.0/firebase-storage-compat.js"></script>
     <script defer src="/__/firebase/init.js?useEmulator=false"></script>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -38,13 +40,20 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container hero-content">
-            <h1>Cybersecurity & <span>Software</span><br>Engineering</h1>
-            <p>I'm a computer science student passionate about building secure and resilient systems.</p>
+            <h1>Cybersecurity & <span>Software</span><br />Engineering</h1>
+            <p>
+                I'm a computer science student passionate about building secure and
+                resilient systems.
+            </p>
             <p>Welcome to my digital portfolio</p>
             <div class="cta-buttons">
-    <button class="btn btn-primary" id="viewProjectsBtn">View Projects</button>
-    <button class="btn btn-secondary" id="contactMeBtn">Contact Me</button>
-</div>
+                <button class="btn btn-primary" id="viewProjectsBtn">
+                    View Projects
+                </button>
+                <button class="btn btn-secondary" id="contactMeBtn">
+                    Contact Me
+                </button>
+            </div>
         </div>
     </section>
 
@@ -52,341 +61,488 @@
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <h2>My Projects</h2>
-                <p>A selection of projects where I've explored different areas of cybersecurity and software development.</p>
+                <h2>Featured Projects</h2>
+                <p>
+                    A selection of projects where I've applied my skills in web
+                    development, cybersecurity, and UX/UI design.
+                </p>
             </div>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">
+                    All Projects
+                </button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="security">
+                    Cybersecurity
+                </button>
+                <button class="filter-btn" data-filter="design">UX/UI Design</button>
+                <button class="filter-btn" data-filter="database">
+                    Database Systems
+                </button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">600 x 400</div>
+                <!-- Real Projects from CV -->
+                <!-- Project 1: Online Store Checkout -->
+                <div class="project-card" data-category="web design">
+                    <div class="project-image">
+                        <div class="project-badge">Hackathon Winner</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SmartGear Online Store</h3>
+                        <p>
+                            Designed and implemented a payment checkout system for a
+                            fictional e-commerce platform. Created intuitive UI/UX flows
+                            that ensured seamless customer experience and won first place in
+                            the Heidelberg Hub hackathon.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">UI/UX Design</span>
+                            <span class="tag">Payment Systems</span>
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Team Collaboration</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-date">July 2025</span>
+                            <span class="project-role">UI/UX Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Employee Performance System -->
+                <div class="project-card" data-category="web database">
+                    <div class="project-image">
+                        <div class="project-badge">Full-stack Development</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Employee Performance Management System</h3>
+                        <p>
+                            Full-stack web application for managing employee performance
+                            assessments. Features include user authentication, performance
+                            tracking, feedback submission, and comprehensive reporting
+                            dashboards.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML/CSS/JS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Authentication</span>
+                            <span class="tag">XAMPP</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-date">Jun-Aug 2024</span>
+                            <span class="project-role">Full-stack Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Financial Aid System -->
+                <div class="project-card" data-category="database">
+                    <div class="project-image">
+                        <div class="project-badge">Database Design</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Financial Aid Management System</h3>
+                        <p>
+                            Led database design and implementation for a financial aid
+                            tracking system. Created normalized database schema, ER
+                            diagrams, and implemented efficient queries for managing student
+                            aid requests and disbursements.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Database Design</span>
+                            <span class="tag">ER Modeling</span>
+                            <span class="tag">Team Leadership</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-date">Feb-Apr 2024</span>
+                            <span class="project-role">Database Lead</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: UX/UI Design Work -->
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <div class="project-badge">Professional Internship</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Mobile & Web App Interfaces</h3>
+                        <p>
+                            Professional UX/UI design work during internship at Mexx
+                            Multimedia Institute. Created wireframes, prototypes, and design
+                            systems for various client projects, conducting user research
+                            and usability testing.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Adobe XD</span>
+                            <span class="tag">User Research</span>
+                            <span class="tag">Prototyping</span>
+                            <span class="tag">Photoshop</span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="project-date">Oct-Dec 2023</span>
+                            <span class="project-role">UX/UI Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity Projects (Existing) -->
+                <div class="project-card" data-category="security">
+                    <div class="project-image">
+                        <div class="project-badge">Security Tools</div>
+                    </div>
                     <div class="project-content">
                         <h3>Ethical Hacking Toolkit</h3>
-                        <p>A collection of Python scripts for network scanning and vulnerability assessment. Includes a port scanner, a password cracker, and a basic packet analyzer. Designed for educational purposes.</p>
+                        <p>
+                            A collection of Python scripts for network scanning and
+                            vulnerability assessment. Includes a port scanner, password
+                            cracker, and basic packet analyzer designed for educational
+                            cybersecurity purposes.
+                        </p>
                         <div class="project-tags">
                             <span class="tag">Python</span>
                             <span class="tag">Cybersecurity</span>
                             <span class="tag">Networking</span>
-                            <span class="tag">Hacking</span>
+                            <span class="tag">Penetration Testing</span>
                         </div>
-                        <div class="ai-tags">
-                            <span>Suggest AI Tags</span>
-                            <i class="fas fa-arrow-right"></i>
+                        <div class="project-meta">
+                            <span class="project-date">Academic Project</span>
+                            <span class="project-role">Security Developer</span>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">600 x 400</div>
+
+                <div class="project-card" data-category="security web">
+                    <div class="project-image">
+                        <div class="project-badge">Web Security</div>
+                    </div>
                     <div class="project-content">
                         <h3>SecureAuth Web App</h3>
-                        <p>A full-stack web application demonstrating secure user authentication and session management. Implements JWT, password hashing, and CSRF protection.</p>
+                        <p>
+                            Full-stack web application demonstrating secure authentication
+                            practices with JWT, password hashing, and CSRF protection.
+                            Implements modern security protocols for user session
+                            management.
+                        </p>
                         <div class="project-tags">
                             <span class="tag">Next.js</span>
                             <span class="tag">Node.js</span>
-                            <span class="tag">Security</span>
-                            <span class="tag">WebApp</span>
+                            <span class="tag">JWT</span>
+                            <span class="tag">Web Security</span>
+                            <span class="tag">Authentication</span>
                         </div>
-                        <div class="ai-tags">
-                            <span>Suggest AI Tags</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">600 x 400</div>
-                    <div class="project-content">
-                        <h3>Malware Analysis Sandbox</h3>
-                        <p>A controlled environment for safely analyzing malware behavior. This project uses virtualization to isolate and monitor suspicious files, logging their system interactions.</p>
-                        <div class="project-tags">
-                            <span class="tag">Virtualization</span>
-                            <span class="tag">Malware</span>
-                            <span class="tag">Reverse Engineering</span>
-                        </div>
-                        <div class="ai-tags">
-                            <span>Suggest AI Tags</span>
-                            <i class="fas fa-arrow-right"></i>
+                        <div class="project-meta">
+                            <span class="project-date">Security Project</span>
+                            <span class="project-role">Full-stack Developer</span>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="view-all-projects">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-<section id="skills" style="background-color: var(--secondary);">
-    <div class="container">
-        <div class="section-header">
-            <h2>My Skills</h2>
-            <p>A snapshot of the technologies and methodologies I work with.</p>
-        </div>
-        
-        <!-- Filter Buttons -->
-        <div class="skill-filters">
-            <button class="filter-btn active" data-filter="all">All Skills</button>
-            <button class="filter-btn" data-filter="technical">Technical</button>
-            <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
-            <button class="filter-btn" data-filter="design">Design & UX</button>
-            <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
-            <button class="filter-btn" data-filter="networking">Networking</button>
-        </div>
-        
-        <!-- Skills Grid -->
-        <div class="skills-container">
-            <!-- Technical Skills -->
-            <div class="skill-card show" data-category="technical">
-                <div class="skill-icon">
-                    <i class="fab fa-python"></i>
-                </div>
-                <h3>Python</h3>
-                <span class="skill-category">Technical</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="technical">
-                <div class="skill-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <h3>C++</h3>
-                <span class="skill-category">Technical</span>
+    <section id="skills" style="background-color: var(--secondary)">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Skills</h2>
+                <p>A snapshot of the technologies and methodologies I work with.</p>
             </div>
 
-            <div class="skill-card hidden" data-category="technical">
-                <div class="skill-icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <h3>HTML5</h3>
-                <span class="skill-category">Technical</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="technical">
-                <div class="skill-icon">
-                    <i class="fab fa-css3-alt"></i>
-                </div>
-                <h3>CSS3</h3>
-                <span class="skill-category">Technical</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="technical">
-                <div class="skill-icon">
-                    <i class="fab fa-js"></i>
-                </div>
-                <h3>JavaScript</h3>
-                <span class="skill-category">Technical</span>
+            <!-- Filter Buttons -->
+            <div class="skill-filters">
+                <button class="filter-btn active" data-filter="all">
+                    All Skills
+                </button>
+                <button class="filter-btn" data-filter="technical">Technical</button>
+                <button class="filter-btn" data-filter="cybersecurity">
+                    Cybersecurity
+                </button>
+                <button class="filter-btn" data-filter="design">Design & UX</button>
+                <button class="filter-btn" data-filter="infrastructure">
+                    Infrastructure
+                </button>
+                <button class="filter-btn" data-filter="networking">
+                    Networking
+                </button>
             </div>
 
-            <div class="skill-card hidden" data-category="technical">
+            <!-- Skills Grid -->
+            <div class="skills-container">
+                <!-- Technical Skills -->
+                <div class="skill-card show" data-category="technical">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <span class="skill-category">Technical</span>
+                </div>
+
+                <div class="skill-card hidden" data-category="technical">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C++</h3>
+                    <span class="skill-category">Technical</span>
+                </div>
+
+                <div class="skill-card hidden" data-category="technical">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML5</h3>
+                    <span class="skill-category">Technical</span>
+                </div>
+
+                <div class="skill-card hidden" data-category="technical">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS3</h3>
+                    <span class="skill-category">Technical</span>
+                </div>
+
+                <div class="skill-card hidden" data-category="technical">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <span class="skill-category">Technical</span>
+                </div>
+
+                <div class="skill-card hidden" data-category="technical">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>MySQL</h3>
                     <span class="skill-category">Technical</span>
                 </div>
-            
-            <!-- Cybersecurity Skills -->
-            <div class="skill-card hidden" data-category="cybersecurity">
-                <div class="skill-icon">
-                    <i class="fas fa-shield-alt"></i>
+
+                <!-- Cybersecurity Skills -->
+                <div class="skill-card hidden" data-category="cybersecurity">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Penetration Testing</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kali Linux</span>
+                        <span class="skill-tag">Metasploit</span>
+                    </div>
+                    <span class="skill-category">Cybersecurity</span>
                 </div>
-                <h3>Penetration Testing</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Kali Linux</span>
-                    <span class="skill-tag">Metasploit</span>
+
+                <div class="skill-card show" data-category="cybersecurity">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Security</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Nmap</span>
+                    </div>
+                    <span class="skill-category">Cybersecurity</span>
                 </div>
-                <span class="skill-category">Cybersecurity</span>
-            </div>
-            
-            <div class="skill-card show" data-category="cybersecurity">
-                <div class="skill-icon">
-                    <i class="fas fa-network-wired"></i>
+
+                <div class="skill-card hidden" data-category="cybersecurity">
+                    <div class="skill-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Web App Security</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Burp Suite</span>
+                        <span class="skill-tag">OWASP ZAP</span>
+                    </div>
+                    <span class="skill-category">Cybersecurity</span>
                 </div>
-                <h3>Network Security</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Wireshark</span>
-                    <span class="skill-tag">Nmap</span>
+
+                <div class="skill-card hidden" data-category="cybersecurity">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Reverse Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Ghidra</span>
+                        <span class="skill-tag">IDA Pro</span>
+                    </div>
+                    <span class="skill-category">Cybersecurity</span>
                 </div>
-                <span class="skill-category">Cybersecurity</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="cybersecurity">
-                <div class="skill-icon">
-                    <i class="fas fa-lock"></i>
+
+                <div class="skill-card hidden" data-category="cybersecurity">
+                    <div class="skill-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3>Vulnerability Assessment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Nessus</span>
+                        <span class="skill-tag">OpenVAS</span>
+                    </div>
+                    <span class="skill-category">Cybersecurity</span>
                 </div>
-                <h3>Web App Security</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Burp Suite</span>
-                    <span class="skill-tag">OWASP ZAP</span>
+
+                <!-- Design & UX Skills -->
+                <div class="skill-card show" data-category="design">
+                    <div class="skill-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Adobe XD</span>
+                    </div>
+                    <span class="skill-category">Design & UX</span>
                 </div>
-                <span class="skill-category">Cybersecurity</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="cybersecurity">
-                <div class="skill-icon">
-                    <i class="fas fa-code"></i>
+
+                <div class="skill-card hidden" data-category="design">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Photoshop</span>
+                        <span class="skill-tag">Lightroom</span>
+                    </div>
+                    <span class="skill-category">Design & UX</span>
                 </div>
-                <h3>Reverse Engineering</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Ghidra</span>
-                    <span class="skill-tag">IDA Pro</span>
+
+                <div class="skill-card hidden" data-category="design">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>User Research</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Usability Testing</span>
+                        <span class="skill-tag">Wireframing</span>
+                    </div>
+                    <span class="skill-category">Design & UX</span>
                 </div>
-                <span class="skill-category">Cybersecurity</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="cybersecurity">
-                <div class="skill-icon">
-                    <i class="fas fa-bug"></i>
+
+                <!-- Infrastructure Skills -->
+                <div class="skill-card show" data-category="infrastructure">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Virtualization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VMware</span>
+                        <span class="skill-tag">VirtualBox</span>
+                    </div>
+                    <span class="skill-category">Infrastructure</span>
                 </div>
-                <h3>Vulnerability Assessment</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Nessus</span>
-                    <span class="skill-tag">OpenVAS</span>
+
+                <div class="skill-card hidden" data-category="infrastructure">
+                    <div class="skill-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Operating Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">Kali Linux</span>
+                    </div>
+                    <span class="skill-category">Infrastructure</span>
                 </div>
-                <span class="skill-category">Cybersecurity</span>
-            </div>
-            
-            <!-- Design & UX Skills -->
-            <div class="skill-card show" data-category="design">
-                <div class="skill-icon">
-                    <i class="fas fa-pencil-ruler"></i>
+
+                <div class="skill-card hidden" data-category="infrastructure">
+                    <div class="skill-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>CLI Proficiency</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Windows</span>
+                    </div>
+                    <span class="skill-category">Infrastructure</span>
                 </div>
-                <h3>UI/UX Design</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Figma</span>
-                    <span class="skill-tag">Adobe XD</span>
+
+                <div class="skill-card show" data-category="infrastructure">
+                    <div class="skill-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Oracle Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">OCI Foundations</span>
+                        <span class="skill-tag">Cloud Infrastructure</span>
+                    </div>
+                    <span class="skill-category">Infrastructure</span>
                 </div>
-                <span class="skill-category">Design & UX</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="design">
-                <div class="skill-icon">
-                    <i class="fas fa-paint-brush"></i>
+
+                <!-- Networking Skills -->
+                <div class="skill-card hidden" data-category="networking">
+                    <div class="skill-icon">
+                        <i class="fas fa-router"></i>
+                    </div>
+                    <h3>Cisco Networking</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CCNA</span>
+                        <span class="skill-tag">Routing</span>
+                    </div>
+                    <span class="skill-category">Networking</span>
                 </div>
-                <h3>Graphic Design</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Photoshop</span>
-                    <span class="skill-tag">Lightroom</span>
+
+                <div class="skill-card hidden" data-category="networking">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Network Protocols</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag">DNS</span>
+                    </div>
+                    <span class="skill-category">Networking</span>
                 </div>
-                <span class="skill-category">Design & UX</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="design">
-                <div class="skill-icon">
-                    <i class="fas fa-users"></i>
+
+                <div class="skill-card show" data-category="networking">
+                    <div class="skill-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Device Configuration</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Switches</span>
+                        <span class="skill-tag">Routers</span>
+                    </div>
+                    <span class="skill-category">Networking</span>
                 </div>
-                <h3>User Research</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Usability Testing</span>
-                    <span class="skill-tag">Wireframing</span>
-                </div>
-                <span class="skill-category">Design & UX</span>
-            </div>
-            
-            <!-- Infrastructure Skills -->
-            <div class="skill-card show" data-category="infrastructure">
-                <div class="skill-icon">
-                    <i class="fas fa-server"></i>
-                </div>
-                <h3>Virtualization</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">VMware</span>
-                    <span class="skill-tag">VirtualBox</span>
-                </div>
-                <span class="skill-category">Infrastructure</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="infrastructure">
-                <div class="skill-icon">
-                    <i class="fas fa-desktop"></i>
-                </div>
-                <h3>Operating Systems</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Windows</span>
-                    <span class="skill-tag">Kali Linux</span>
-                </div>
-                <span class="skill-category">Infrastructure</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="infrastructure">
-                <div class="skill-icon">
-                    <i class="fas fa-terminal"></i>
-                </div>
-                <h3>CLI Proficiency</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Linux</span>
-                    <span class="skill-tag">Windows</span>
-                </div>
-                <span class="skill-category">Infrastructure</span>
             </div>
 
-            <div class="skill-card show" data-category="infrastructure">
-                <div class="skill-icon">
-                    <i class="fas fa-cloud"></i>
-                </div>
-                <h3>Oracle Cloud</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">OCI Foundations</span>
-                    <span class="skill-tag">Cloud Infrastructure</span>
-                </div>
-                <span class="skill-category">Infrastructure</span>
-            </div>
-            
-            <!-- Networking Skills -->
-            <div class="skill-card hidden" data-category="networking">
-                <div class="skill-icon">
-                    <i class="fas fa-router"></i>
-                </div>
-                <h3>Cisco Networking</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">CCNA</span>
-                    <span class="skill-tag">Routing</span>
-                </div>
-                <span class="skill-category">Networking</span>
-            </div>
-            
-            <div class="skill-card hidden" data-category="networking">
-                <div class="skill-icon">
-                    <i class="fas fa-project-diagram"></i>
-                </div>
-                <h3>Network Protocols</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">TCP/IP</span>
-                    <span class="skill-tag">DNS</span>
-                </div>
-                <span class="skill-category">Networking</span>
-            </div>
-            
-            <div class="skill-card show" data-category="networking">
-                <div class="skill-icon">
-                    <i class="fas fa-wrench"></i>
-                </div>
-                <h3>Device Configuration</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Switches</span>
-                    <span class="skill-tag">Routers</span>
-                </div>
-                <span class="skill-category">Networking</span>
+            <!-- Show All Button -->
+            <div class="show-all-container">
+                <button id="show-all-btn" class="btn btn-secondary">
+                    Show All Skills
+                </button>
+                <button id="show-less-btn" class="btn btn-secondary" style="display: none">
+                    Show Less
+                </button>
             </div>
         </div>
-        
-        <!-- Show All Button -->
-        <div class="show-all-container">
-            <button id="show-all-btn" class="btn btn-secondary">Show All Skills</button>
-            <button id="show-less-btn" class="btn btn-secondary" style="display: none;">Show Less</button>
-        </div>
-
-        
-    </div>
-</section>
+    </section>
 
     <!-- Blog Section -->
     <section id="blog">
         <div class="container">
             <div class="section-header">
                 <h2>From the Blog</h2>
-                <p>Sharing insights, tutorials, and write-ups from my journey in cybersecurity.</p>
+                <p>
+                    Sharing insights, tutorials, and write-ups from my journey in
+                    cybersecurity.
+                </p>
             </div>
             <div class="blog-grid">
                 <div class="blog-card">
                     <div class="blog-date">October 26, 2023</div>
                     <div class="blog-content">
                         <h3>Anatomy of a Phishing Attack</h3>
-                        <p>A deep dive into the techniques used in modern phishing scams and how to recognize them.</p>
+                        <p>
+                            A deep dive into the techniques used in modern phishing scams
+                            and how to recognize them.
+                        </p>
                         <div class="blog-tags">
                             <span class="blog-tag">Social Engineering</span>
                             <span class="blog-tag">Security Awareness</span>
@@ -398,7 +554,10 @@
                     <div class="blog-date">September 15, 2023</div>
                     <div class="blog-content">
                         <h3>CTF Write-up: Blue Team Challenge</h3>
-                        <p>My approach to solving the "Blue Team" box, focusing on forensics and log analysis.</p>
+                        <p>
+                            My approach to solving the "Blue Team" box, focusing on
+                            forensics and log analysis.
+                        </p>
                         <div class="blog-tags">
                             <span class="blog-tag">CTF</span>
                             <span class="blog-tag">Forensics</span>
@@ -411,7 +570,10 @@
                     <div class="blog-date">August 01, 2023</div>
                     <div class="blog-content">
                         <h3>Getting Started with Secure Coding</h3>
-                        <p>Fundamental principles and best practices for writing more secure software from the ground up.</p>
+                        <p>
+                            Fundamental principles and best practices for writing more
+                            secure software from the ground up.
+                        </p>
                         <div class="blog-tags">
                             <span class="blog-tag">Development</span>
                             <span class="blog-tag">Best Practices</span>
@@ -424,18 +586,28 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" style="background-color: var(--secondary);">
+    <section id="about" style="background-color: var(--secondary)">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <div class="section-header" style="text-align: left; margin-bottom: 30px;">
+                    <div class="section-header" style="text-align: left; margin-bottom: 30px">
                         <h2>About Me</h2>
                     </div>
-                    <p>I am a computer science student with a strong interest in cybersecurity. I enjoy exploring the intersection of offensive and defensive security, and I'm always eager to learn new technologies and programming languages.</p>
-                    <p>I'm currently focused on developing my skills in penetration testing, secure coding practices, and network security. When I'm not in front of a terminal, I enjoy capture-the-flag (CTF) competitions and contributing to open-source security tools.</p>
+                    <p>
+                        I am Elijah Baiden, a computer science student with a strong interest in
+                        cybersecurity. I enjoy exploring the intersection of offensive and
+                        defensive security, and I'm always eager to learn new technologies
+                        and programming languages.
+                    </p>
+                    <p>
+                        I'm currently focused on developing my skills in penetration
+                        testing, secure coding practices, and network security. When I'm
+                        not in front of a terminal, I enjoy capture-the-flag (CTF)
+                        competitions and contributing to open-source security tools.
+                    </p>
                 </div>
                 <div class="about-image">
-                    550 x 550
+                    <img src="./Images/Me.jpg" alt="Elijah Ato Baiden - Cybersecurity Student" class="profile-photo">
                 </div>
             </div>
         </div>
@@ -448,22 +620,27 @@
                 <div class="section-header">
                     <h2>Get in Touch</h2>
                 </div>
-                <p>Have a project idea, a security concern, or just want to connect? My inbox is always open.</p>
-                
+                <p>
+                    Have a project idea, a security concern, or just want to connect? My
+                    inbox is always open.
+                </p>
+
                 <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Your Address" required>
-                    <input type="text" placeholder="Subject">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <input type="text" placeholder="Your Address" required />
+                    <input type="text" placeholder="Subject" />
                     <textarea placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
-                
+
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="https://github.com/Elias512" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/elijah-baiden-0b795a247" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:eliatobaiden@outlook.com"><i class="fab fa-microsoft"></i></a>
                 </div>
             </div>
         </div>
@@ -472,10 +649,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; <span id="year"></span> GHOSTS.Dev.404. All rights reserved.</p>
+            <p>
+                &copy; <span id="year"></span> GHOSTS.Dev.404. All rights reserved.
+            </p>
         </div>
     </footer>
 
-    <script src ="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>

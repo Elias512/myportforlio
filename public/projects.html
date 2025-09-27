@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo" id="logo">CSECPortfolio</div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#projects">Featured</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#blog">Blog</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects Hero Section -->
+    <section class="projects-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>My Projects</h1>
+                <p>Explore my work in cybersecurity, web development, and UX/UI design</p>
+                <div class="search-filter-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="project-search" placeholder="Search projects...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Filter Section -->
+    <section class="advanced-filters">
+        <div class="container">
+            <div class="filter-group">
+                <h3>Filter by Category</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="security">Cybersecurity</button>
+                    <button class="filter-btn" data-filter="design">UX/UI Design</button>
+                    <button class="filter-btn" data-filter="database">Database Systems</button>
+                    <button class="filter-btn" data-filter="hackathon">Hackathon</button>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <h3>Filter by Technology</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag" data-tech="python">Python</span>
+                    <span class="tech-tag" data-tech="javascript">JavaScript</span>
+                    <span class="tech-tag" data-tech="php">PHP</span>
+                    <span class="tech-tag" data-tech="mysql">MySQL</span>
+                    <span class="tech-tag" data-tech="figma">Figma</span>
+                    <span class="tech-tag" data-tech="react">React</span>
+                    <span class="tech-tag" data-tech="node">Node.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Projects Grid -->
+    <section class="all-projects">
+        <div class="container">
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded here by JavaScript -->
+            </div>
+            
+            <!-- Project Counter -->
+            <div class="project-counter">
+                <span id="project-count">0</span> projects found
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="back-to-home">
+        <div class="container">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <span id="year"></span> GHOSTS.Dev.404. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>
