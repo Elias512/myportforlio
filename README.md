@@ -17,7 +17,7 @@ Built with **HTML**, **CSS**, and J**avaScript**, and deployed seamlessly on **F
 
 
 **Live Demo**
-Visit the live portfolio: \[https://myportfolio-404.web.app](https://myportfolio-404.web.app)
+Visit the live portfolio: ![https://myportfolio-404.web.app](https://myportfolio-404.web.app)
 
 
 Features
@@ -52,39 +52,22 @@ Project Structure
 my-portfolio-website/
 
 ├── .firebaserc                 	# Firebase project configuration
-
 ├── firebase.json              	# Firebase hosting settings
-
 ├── package-lock.json          	# NPM dependency lock file
-
 ├── README.md                  	# Project documentation (this file)
-
 ├── public/                    	# Publicly accessible web assets
-
 │   ├── index.html             	# Main landing page
-
 │   ├── projects.html          	# Projects portfolio page
-
 │   ├── style.css              	# Main stylesheet
-
 │   ├── script.js              	# Main JavaScript functionality
-
 │   ├── projects.js            	# Projects-specific JavaScript
-
 │   ├── Images/                	# Image assets folder
-
 │   │   └── (portfolio images, icons, screenshots, etc.)
-
 │   └── Name                   	# (Likely a text file or personal branding asset)
-
 ├── .git/                      	# Git version control repository
-
 ├── .github/                   	# GitHub-specific configurations
-
 │   └── (GitHub Actions, Issues templates, etc.)
-
 ├── .idx/                      	# Development environment configuration
-
 └── .gitignore                 	# Git ignore rules
 
 
