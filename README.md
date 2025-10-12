@@ -3,12 +3,12 @@
 README FILE
 
 
-\[Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-success)
-\[Firebase Hosting](https://img.shields.io/badge/Hosting-Firebase-orange)
-\[Responsive Design](https://img.shields.io/badge/Design-Responsive-blue)
-\[HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat\&logo=html5\&logoColor=white)
-\[CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat\&logo=css3\&logoColor=white)
-\[JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
+![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-success)
+![Firebase Hosting](https://img.shields.io/badge/Hosting-Firebase-orange)
+![Responsive Design](https://img.shields.io/badge/Design-Responsive-blue)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat\&logo=html5\&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat\&logo=css3\&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat\&logo=javascript\&logoColor=black)
 
 
 A modern, responsive portfolio website showcasing my expertise in cybersecurity, web development, and software engineering.
