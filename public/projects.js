@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const indicators = document.querySelector('.carousel-indicators');
         
         if (images && images.length > 0) {
-            mainImage.src = `Images/Projects/${images[0]}`;
+            mainImage.src = `./Images/Projects/${images[0]}`;
             mainImage.alt = 'Project screenshot';
             
             // Create indicators
@@ -410,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
             // Use placeholder if no images
-            mainImage.src = 'images/projects/placeholder.jpg';
+            mainImage.src = './Images/Projects/placeholder.jpg';
             mainImage.alt = 'Project placeholder';
             indicators.innerHTML = '';
         }
@@ -421,9 +421,9 @@ document.addEventListener('DOMContentLoaded', function() {
         currentImageIndex = index;
         const mainImage = document.getElementById('modal-main-image');
         const indicators = document.querySelectorAll('.indicator');
-        
-        mainImage.src = `images/projects/${images[index]}`;
-        
+
+        mainImage.src = `./Images/Projects/${images[index]}`;
+
         // Update indicators
         indicators.forEach((indicator, i) => {
             indicator.classList.toggle('active', i === index);
