@@ -1,4 +1,4 @@
-// Projects Page Functionality with Modal
+// Projects Page Functionality with Manual Image Navigation
 document.addEventListener('DOMContentLoaded', function() {
     // Project Data with detailed information
     const projectsData = [
@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 "Product Details Page.jpg",
                 "Purchase State.jpg",
                 "Shopping Cart Empty.jpg"
-
             ],
             features: [
                 "Secure payment gateway integration",
@@ -163,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSearch = '';
     let currentTechFilters = [];
     let currentImageIndex = 0;
-    let imageInterval;
+    let currentProjectImages = [];
 
     // Initialize the page
     renderProjects(projectsData);
@@ -285,8 +284,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="modal-images">
                             <div class="image-carousel">
                                 <img id="modal-main-image" src="" alt="Project Image">
-                                <button class="carousel-prev">‹</button>
-                                <button class="carousel-next">›</button>
+                                <div class="carousel-controls">
+                                    <button class="carousel-prev">‹</button>
+                                    <span class="carousel-counter">
+                                        <span id="current-image">1</span> / <span id="total-images">0</span>
+                                    </span>
+                                    <button class="carousel-next">›</button>
+                                </div>
                                 <div class="carousel-indicators"></div>
                             </div>
                         </div>
@@ -336,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.addEventListener('click', closeProjectModal);
         });
         
-        // Carousel controls
+        // Carousel controls - manual navigation only
         document.querySelector('.carousel-prev').addEventListener('click', showPreviousImage);
         document.querySelector('.carousel-next').addEventListener('click', showNextImage);
         
@@ -355,6 +359,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const modal = document.getElementById('project-modal');
         currentImageIndex = 0;
+        currentProjectImages = project.images || [];
         
         // Populate modal content
         document.getElementById('modal-title').textContent = project.title;
@@ -377,28 +382,30 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Show modal
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-        
-        // Start automatic image rotation
-        startImageRotation(project.images);
+        document.body.style.overflow = 'hidden';
     }
 
     // Close project modal
     function closeProjectModal() {
         const modal = document.getElementById('project-modal');
         modal.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
-        clearInterval(imageInterval);
+        document.body.style.overflow = '';
     }
 
     // Setup image carousel
     function setupImageCarousel(images) {
         const mainImage = document.getElementById('modal-main-image');
         const indicators = document.querySelector('.carousel-indicators');
+        const currentImageSpan = document.getElementById('current-image');
+        const totalImagesSpan = document.getElementById('total-images');
         
         if (images && images.length > 0) {
             mainImage.src = `./Images/Projects/${images[0]}`;
             mainImage.alt = 'Project screenshot';
+            
+            // Update counter
+            currentImageSpan.textContent = '1';
+            totalImagesSpan.textContent = images.length;
             
             // Create indicators
             indicators.innerHTML = '';
@@ -413,6 +420,8 @@ document.addEventListener('DOMContentLoaded', function() {
             mainImage.src = './Images/Projects/placeholder.jpg';
             mainImage.alt = 'Project placeholder';
             indicators.innerHTML = '';
+            currentImageSpan.textContent = '0';
+            totalImagesSpan.textContent = '0';
         }
     }
 
@@ -421,8 +430,10 @@ document.addEventListener('DOMContentLoaded', function() {
         currentImageIndex = index;
         const mainImage = document.getElementById('modal-main-image');
         const indicators = document.querySelectorAll('.indicator');
+        const currentImageSpan = document.getElementById('current-image');
 
         mainImage.src = `./Images/Projects/${images[index]}`;
+        currentImageSpan.textContent = index + 1;
 
         // Update indicators
         indicators.forEach((indicator, i) => {
@@ -432,48 +443,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show next image
     function showNextImage() {
-        const projectId = getCurrentProjectId();
-        const project = projectsData.find(p => p.id === projectId);
-        if (!project || !project.images) return;
+        if (currentProjectImages.length === 0) return;
         
-        currentImageIndex = (currentImageIndex + 1) % project.images.length;
-        showImage(currentImageIndex, project.images);
-        resetImageRotation(project.images);
+        currentImageIndex = (currentImageIndex + 1) % currentProjectImages.length;
+        showImage(currentImageIndex, currentProjectImages);
     }
 
     // Show previous image
     function showPreviousImage() {
-        const projectId = getCurrentProjectId();
-        const project = projectsData.find(p => p.id === projectId);
-        if (!project || !project.images) return;
+        if (currentProjectImages.length === 0) return;
         
-        currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
-        showImage(currentImageIndex, project.images);
-        resetImageRotation(project.images);
-    }
-
-    // Start automatic image rotation
-    function startImageRotation(images) {
-        if (images && images.length > 1) {
-            imageInterval = setInterval(() => {
-                showNextImage();
-            }, 5000); // Change image every 5 seconds
-        }
-    }
-
-    // Reset image rotation timer
-    function resetImageRotation(images) {
-        clearInterval(imageInterval);
-        startImageRotation(images);
-    }
-
-    // Get current project ID from modal
-    function getCurrentProjectId() {
-        // This would need to be stored when opening the modal
-        // For simplicity, we'll find it by title match
-        const title = document.getElementById('modal-title').textContent;
-        const project = projectsData.find(p => p.title === title);
-        return project ? project.id : null;
+        currentImageIndex = (currentImageIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
+        showImage(currentImageIndex, currentProjectImages);
     }
 
     // Add Clear All button for technology filters
@@ -494,6 +475,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Footer year update
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
 
 // Logo scroll to top
 document.addEventListener('DOMContentLoaded', function() {
@@ -507,8 +495,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
-// Update footer year dynamically
-// Auto-update footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-

@@ -656,6 +656,22 @@
     </footer>
 
     <script src="./script.js"></script>
+    <script>
+        // Add this right before closing </body> tag in index.html
+        console.log('🚀 Debugging image paths...');
+        console.log('Current page URL:', window.location.href);
+
+        // Test image loading
+        const testImage = new Image();
+        testImage.onload = function () {
+            console.log('✅ SUCCESS: Image loaded from:', this.src);
+        };
+        testImage.onerror = function () {
+            console.error('❌ FAILED: Image not found at:', this.src);
+            console.log('Trying to access:', './Images/Projects/EPMS2.png');
+        };
+        testImage.src = './Images/Projects/EPMS2.png';
+    </script>
 </body>
 
 </html>
